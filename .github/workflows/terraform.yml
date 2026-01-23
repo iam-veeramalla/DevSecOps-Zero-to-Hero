@@ -18,7 +18,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # 2. Install Vault CLI (MANUAL – RELIABLE)
+      # 2. Install Vault CLI (manual, reliable)
       - name: Install Vault CLI
         run: |
           VAULT_VERSION=1.15.6
@@ -37,20 +37,20 @@ jobs:
             jwt=$ACTIONS_ID_TOKEN_REQUEST_TOKEN
 
       # 4. Read AWS credentials from Vault
-      - name: Read AWS credentials from Vault
+      - name: Read AWS credentials
         env:
           VAULT_ADDR: http://98.82.141.249:8200
         run: |
           echo "TF_VAR_aws_access_key=$(vault kv get -field=access_key kv/aws)" >> $GITHUB_ENV
           echo "TF_VAR_aws_secret_key=$(vault kv get -field=secret_key kv/aws)" >> $GITHUB_ENV
 
-      # 5. Install Terraform (latest pinned)
+      # 5. Install Terraform (pinned)
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "1.14.4"
 
-      # 6. Terraform Init & Apply
+      # 6. Terraform Init & Apply (terraform folder)
       - name: Terraform Apply
         working-directory: terraform
         run: |
