@@ -1,4 +1,4 @@
-# 🛡️ Securing Containers
+# Securing Containers
 
 This repository is a **hands-on, beginner-friendly guide** to securing containers.
 
@@ -7,7 +7,7 @@ the container so each concept builds naturally on the previous one.
 
 ---
 
-## 🎯 What You Will Learn
+## What You Will Learn
 
 - Why running containers as **root** is dangerous
 - How to run containers as a **non-root user**
@@ -18,7 +18,7 @@ the container so each concept builds naturally on the previous one.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 sample-app/
@@ -29,7 +29,7 @@ sample-app/
 
 ---
 
-## 🧪 Sample Application
+## Sample Application
 
 We use a **very small Node.js application** so the focus stays on
 **container behavior and security**, not application complexity.
