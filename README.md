@@ -32,25 +32,25 @@
 
 ---
 
-## Day 3: Secret Management & Infrastructure as Code (IaC) Security
-
-**Focus**: Preventing credential leaks and securing your Terraform/Bicep code.
+## Day 3: IaC Security
 
 ### Concepts:
-- **Secret Sprawl**: Why `.env` and hardcoded keys are a disaster
+- Best Practices
 - **IaC Scanning**: Catching misconfigured S3 buckets or open Security Groups before deployment
+- Secret Management with Vault
 
 ### Tool Spotlight:
-- TruffleHog (Secret Scanning)
-- Checkov or KICS (IaC Scanning)
+- Gitleaks
+- Checkov
+- Vault
 
 ### Hands-on Lab:
-- Scan a "leaky" Terraform repo
+- Scan a "less secure" Terraform repo
 - Implement HashiCorp Vault for dynamic secret injection
 
 ---
 
-## Day 4: Container & Kubernetes Security
+## Day 4: Container Security
 
 **Focus**: Securing the ship (Docker) and the harbor (K8s).
 
@@ -69,40 +69,35 @@
 
 ---
 
-## Day 5: Dynamic Testing (DAST) & API Security
+## Day 5: Kubernetes Security
 
-**Focus**: Testing the running application for real-world exploits.
-
-### Concepts:
-- **DAST** (Dynamic Application Security Testing): Attacking the app like a hacker
-- OWASP Top 10 (2026 Updates): Injection, Broken Access Control, etc.
-- Securing REST & GraphQL APIs
-
-### Tool Spotlight:
-- OWASP ZAP (Automation)
-- StackHawk
-
-### Hands-on Lab:
-- Run an automated ZAP baseline scan against a running staging environment
-- Generate a PDF report
+**Focus**: 
+ 
+- Namespaces
+- RBAC
+- Network Policies
+- Kyverno
+- Secrets
+- External Secrets Operator
 
 ---
 
-## Day 6: Runtime Security & Compliance as Code
-
-**Focus**: Monitoring what happens AFTER deployment and staying compliant.
+## Day 6: SAST, SCA and DAST
+**Focus**: Testing the running application for real-world exploits.
 
 ### Concepts:
-- **Runtime Security**: Detecting drift and suspicious behavior (e.g., a shell opening in a container)
-- **eBPF**: The secret sauce of modern cloud-native security
-- **Compliance** (SOC2/GDPR) as an automated check
+- **SAST**
+- **SCA**
+- **DAST** (Dynamic Application Security Testing): Attacking the app like a hacker
+
 
 ### Tool Spotlight:
-- Falco (Runtime Detection)
-- Prowler (AWS/Azure/GCP Auditing)
+- SonarQube
+- OWASP ZAP (Automation)
 
 ### Hands-on Lab:
-- Set up Falco to alert on Slack whenever someone runs `apt-get install` inside a production container
+- Run an automated ZAP baseline scan against a Python application
+- Run SAST and SCA against a Python application
 
 ---
 
