@@ -262,7 +262,7 @@ localhost:3000
 Scan target by running ZAP from cli
 
 ```
-docker run --rm \                                                                                      ✔  8509  15:33:58
+docker run --rm \
   -v "$(pwd):/zap/wrk" \
   -t ghcr.io/zaproxy/zaproxy:stable \
   zap-baseline.py \
@@ -273,7 +273,7 @@ docker run --rm \                                                               
 Scan target by running ZAP from UI
 
 ```
-docker run -it \                                                                             SIGINT(2) ↵  8509  15:36:05
+docker run -it \
   -p 8080:8080 \
   ghcr.io/zaproxy/zaproxy:stable \
   zap-webswing.sh
