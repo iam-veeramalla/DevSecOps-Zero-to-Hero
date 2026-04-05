@@ -1,6 +1,6 @@
 # 1. Define the Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-1"
 }
 
 # 2. Create a Random ID for unique bucket naming
