@@ -205,6 +205,11 @@ Follow the Instructions provided here:
 
 https://docs.sonarsource.com/sonarqube-server/10.8/analyzing-source-code/scanners/sonarscanner
 
+### Rename sonar-projects.properties to sonar-project.properties
+```bash
+mv sonar-projects.properties sonar-project.properties
+```
+
 ### Run Scan
 ```bash
 sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=<TOKEN>
