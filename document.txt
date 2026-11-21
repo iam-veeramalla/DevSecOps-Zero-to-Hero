@@ -1,0 +1,11 @@
+Execution means carrying out the steps of a program, script, pipeline, or command in a defined order.
+
+1. Start: The operating system or runtime receives the command and prepares resources.
+2. Parse: The source code or instruction is checked and converted into a form the runtime can understand.
+3. Load: Required files, libraries, environment variables, configurations, and dependencies are loaded.
+4. Run: Statements execute in sequence, while loops, conditions, functions, and external commands control the flow.
+5. Interact: The process reads input and writes output or logs as needed.
+6. Handle results: Success continues normal execution; errors are caught, reported, and handled through a failure path.
+7. Complete: The process releases resources and returns an exit code. A zero exit code normally means success, while a non-zero code indicates failure.
+
+For a DevSecOps pipeline, execution also includes building the application, running automated tests, scanning dependencies and containers for vulnerabilities, applying security and quality gates, and deploying to the target environment.
